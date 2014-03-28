@@ -10,7 +10,7 @@
 
 
 	<js-module src="www/bleTest.js" name="BLETestPlugin">
-		<clobbers target="window.bleTest" />
+		<runs />
 	</js-module>
 
 	<!-- android -->

@@ -6,7 +6,6 @@
 	window.bleTest = function( cb ) {
 		exec(
 			function() {
-				console.log('success',)
 				cb( null, true );
 			},
 			function( error ) {
@@ -17,4 +16,4 @@
 			[]
 		);
 	};
-} );
+} )();
