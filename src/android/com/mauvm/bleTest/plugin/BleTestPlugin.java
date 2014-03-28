@@ -1,4 +1,4 @@
-package com.mauvm.bleTest.plugin;
+package com.mauvm.bletest.plugin;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -9,7 +9,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class BleTestPlugin extends CordovaPlugin {
+public class BLETestPlugin extends CordovaPlugin {
 
 	private Context context;
 
@@ -27,7 +27,7 @@ public class BleTestPlugin extends CordovaPlugin {
 			if( this.context.getPackageManager().hasSystemFeature( PackageManager.FEATURE_BLUETOOTH_LE ) ) {
 				callbackContext.success();
 			} else {
-				callbackContext.error( "BLE not supported." );
+				callbackContext.error( "Bluetooth LE not supported." );
 			}
 
 			return true;
