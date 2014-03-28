@@ -9,7 +9,6 @@ import org.json.JSONObject;
 
 public class BleTestPlugin extends CordovaPlugin {
 
-	@Override
 	public boolean execute( String action, JSONArray data, CallbackContext callbackContext ) throws JSONException {
 
 		if( action.equals( "test" ) ) {
