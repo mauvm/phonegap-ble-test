@@ -21,11 +21,12 @@
 			</feature>
 		</config-file>
 
-		<source-file src="src/android/com/mauvm/bletest/plugin/BLETestPlugin.java" target-dir="src/com/mauvm/plugins/bletest" />
 		<config-file target="AndroidManifest.xml" parent="/manifest">
 			<uses-permission android:name="android.permission.BLUETOOTH"/>
 			<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
 			<uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/>
 		</config-file>
+
+		<source-file src="src/android/com/mauvm/bletest/plugin/BLETestPlugin.java" target-dir="src/com/mauvm/plugins/bletest/plugin" />
 	</platform>
 </plugin>
