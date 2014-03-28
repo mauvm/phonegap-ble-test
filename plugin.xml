@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+		id="com.mauvm.bleTest.plugin"
+		version="0.1.0">
+	<name>BLE Test</name>
+	<description>BLE Test Plugin</description>
+	<license>MIT</license>
+	<keywords>phonegap,BLE,test</keywords>
+
+
+	<js-module src="www/bleTest.js" name="BLETestPlugin">
+		<clobbers target="window.bleTest" />
+	</js-module>
+
+	<!-- android -->
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="BLETestPlugin">
+				<param name="android-package" value="com.mauvm.bleTest.plugin"/>
+			</feature>
+		</config-file>
+
+		<source-file src="src/android/com/mauvm/bleTest/plugin/BleTestPlugin.java" target-dir="src/android/com/mauvm/bleTest/plugin" />
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+			<uses-permission android:name="android.permission.BLUETOOTH"/>
+			<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+			<uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/>
+		</config-file>
+	</platform>
+</plugin>
