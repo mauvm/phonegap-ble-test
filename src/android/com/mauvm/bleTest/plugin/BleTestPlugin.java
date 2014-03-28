@@ -12,7 +12,18 @@ public class BleTestPlugin extends CordovaPlugin {
 	@Override
 	public boolean execute( String action, JSONArray data, CallbackContext callbackContext ) throws JSONException {
 
-		return getPackageManager().hasSystemFeature( PackageManager.FEATURE_BLUETOOTH_LE );
+		if( action.equals( "test" ) ) {
+
+			if( getPackageManager().hasSystemFeature( PackageManager.FEATURE_BLUETOOTH_LE ) ) {
+				callbackContext.success();
+			} else {
+				callbackContext.error( "BLE not supported." );
+			}
+
+			return true;
+		}
+
+		return false;
 
 	}
 

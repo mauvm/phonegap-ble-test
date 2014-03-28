@@ -6,10 +6,11 @@
 	window.bleTest = function( cb ) {
 		exec(
 			function() {
+				console.log('success',)
 				cb( null, true );
 			},
-			function() {
-				cb( null, false );
+			function( error ) {
+				cb( error, false );
 			},
 			'BleTestPlugin',
 			'test',
